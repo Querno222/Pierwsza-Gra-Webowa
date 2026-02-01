@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CatchTheFoil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="changebutton.css">
+  <link rel="stylesheet" href="leaderboard.css">
+  <link rel="stylesheet" href="maingame.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="icon" href="ImageFolder/FoilsImages/RedFoil.png">
+  <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+  <style>
+     @import url('https://fonts.cdnfonts.com/css/common-pixel');
+  </style>
+                
+  
+
+</head>
+
+<body>
+  
+</div>
+
+  <div id="body1">
+    <div id="GameStartDiv">
+  <h1>Ready?</h1>
+  <p id="GameStartText">3 2 1</p>
+  <img src="ImageFolder/RedLamp.png">
+  <img src="ImageFolder/YellowLamp.png">
+  <img src="ImageFolder/GreenLamp.png">
+</div>
+
+    <div id="damageOverlay"></div>
+    <div id="MainContainer"> 
+        <div id="TopContainer"> 
+          <div id="CatchTheFoilGameName">
+            <h1>
+              <span>Catch The Foil!</span>
+     
+            </h1>
+          </div>
+          <div id="TextFloor"></div>
+        </div>
+        <nav>
+  <ul>
+   <li class="navbarbutton1 active"><a href="#">Play</a></li>
+   <li class="navbarbutton2"><a href="#">Ranking</a></li>
+  </ul>
+</nav>
+
+        <div id="MainMenuContainer1">
+          
+          <div id="MainDiv03">
+            
+            <div class="avatar-container">
+              <img id="avatar" src="AvatarPng/AvatarLaserBlue.png" class="avatar" alt="Avatar">
+              <div class="change-button" onclick="changeAvatar()"></div>
+            </div>
+          </div>
+          <input type="text" id="inptusername" placeholder="Nickname" maxlength="15">
+
+          <div id="PlayButton" class="Button ButtonTexture">Play</div>
+             <div>
+              <button id="ResetLeaderboardButton" class="Button">Reset LB</button>
+            </div>
+
+          <div id="CenterContainerSkins"> 
+            <h1 id="leaderboardheading">Leaderboard</h1>
+            <div id="TextFloorSkin"></div>
+            <div class="leaderboardlist"></div>
+          </div>
+        </div>
+
+        <div id="MainMenuContainer2">
+          <div id="CenterContainerLeaderboard"> 
+            <h1 id="leaderboardheading">🏆Ranking🏆</h1>
+            <div class="leaderboardlist"></div>
+
+          </div>
+        </div>
+      </div>
+    <div id="GameContainer"> 
+      <div id="Header1">
+        <div id="TextBox">
+          <div id="HeartText">❤️❤️❤️</div>
+          <div id="ScoreText">Score:001</div>
+        </div>
+      </div>
+
+      <div id="PlayerName">
+        <span class="nickname">Nickname</span>
+        <img id="PlayerCatcher" src="images/avatar1.png" alt="Player Character">
+      </div>
+      <div id="GridLayout">
+   </div>
+</div>
+
+
+    <div id="GameOverDiv">
+  <h1>💀GAME OVER💀</h1>
+  <div id="FinalScoreText">Your score: 0</div>
+  <button id="PlayAgainButton">Play Again🔁</button>
+</div>
+  </div>
+  <script src="mechanics.js"></script>
+  <script src="javascript.js"></script>
+  <script src="changescreens.js"></script>
+</body>
+</html>

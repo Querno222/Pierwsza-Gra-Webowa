@@ -1,0 +1,115 @@
+#PlayerName {
+    position: absolute;
+    text-align: center;
+    z-index: 1000;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+#PlayerName .nickname {
+    position: absolute;
+    display: block;
+    color: white;
+    font-size: 1em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    bottom: 20px; /* Position below the image */
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: -1;
+}
+
+#PlayerCatcher {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    transform-origin: center;
+}
+
+#PlayerCatcher.catch-animation {
+    animation: catchBounce 0.2s ease-in-out;
+}
+
+@keyframes catchBounce {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+/* Game Start Countdown Overlay */
+#GameStartDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* shown via JS during countdown */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    gap: 30px;
+}
+
+#GameStartDiv h1 {
+    font-size: 10px;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 768px) {
+  #GameStartDiv h1 {
+    font-size: 4em;
+  }
+}
+
+#GameStartDiv p {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 768px) {
+  #GameStartDiv p {
+    font-size: 3em;
+  }
+}
+
+#GameStartDiv img {
+    width: 120px;
+    height: 120px;
+    display: none; /* shown individually during countdown */
+}
+
+#GameStartDiv img:nth-child(3) { /* red lamp (3rd element after h1, p) */
+    display: none;
+}
+
+#GameStartDiv img:nth-child(4) { /* yellow lamp */
+    display: none;
+}
+
+#GameStartDiv img:nth-child(5) { /* green lamp */
+    display: none;
+}
+
+/* Ensure game container has proper positioning context */
+#GameContainer {
+    position: relative;
+    min-height: 400px; /* Adjust based on your game's needs */
+}

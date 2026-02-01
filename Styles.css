@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  min-height: 100dvh;
+  min-width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+
+  background: linear-gradient(180deg, rgb(255, 255, 255),rgb(255, 0, 0));
+  position: relative; 
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("ImageFolder/BackgroundImages/BackgroundTexture.png");
+  background-repeat: repeat;
+  background-size: 75px 75px; 
+  opacity: 0.2; 
+  pointer-events: none; 
+  z-index: 0;
+}
+
+#body1 {
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  min-height: 100dvh;
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  /* Tekstura + gradient tylko tutaj */
+}
+
+#MainMenuContainer1 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0);
+  justify-content: flex-start;
+  align-items: center;
+  height: 65%;
+  width: 65%;
+  gap: 20px;
+  transition: opacity 0.3s ease;
+}
+
+#MainMenuContainer2 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(108, 0, 250, 0);
+  justify-content: flex-start;
+  align-items: center;
+  height: 60vh;
+  width: 80vw;
+  gap: 30px;
+  transition: opacity 0.3s ease;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  width: 80%;
+  height: 5%;
+}
+
+nav ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a{
+  color: white;
+  text-decoration:none;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  nav ul li a {
+    font-size: 50px;
+  }
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.611);
+ 
+}
+
+.active {
+  background-color: rgb(67, 67, 67); /* color navbar active background*/
+
+}
+
+#MainContainer {
+   background: linear-gradient(60deg , rgba(0, 0, 0, 0.216));
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 30px;
+    align-items: center;
+    height: 80vh;
+    width: 90vw;
+    overflow:hidden;
+    border: 8px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgb(3, 3, 3);
+}
+
+@media (min-width: 768px) {
+  #MainContainer {
+    width: 80vw;
+    padding-top: 50px;
+    gap: 20px;
+    border: 10px solid rgb(0, 0, 0);
+  }
+}
+
+#GameContainer {
+    background: linear-gradient(60deg , rgba(0, 0, 0, 0.578));
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    width: 95vw;
+    gap: 15px;
+    overflow:hidden;
+    border: 8px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  #GameContainer {
+    width: 80vw;
+    gap: 20px;
+    border: 10px solid rgb(0, 0, 0);
+  }
+}
+
+#Header1 {
+  display: flex;
+  background-color: rgb(46, 46, 46);
+  flex: 0 0 10%; /* This locks height to 20% */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#TextBox {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(74, 11, 142, 0);
+  height: 70%;
+  width: 95%;
+  align-items:center;
+  justify-content: space-around;
+}
+
+#HeartText {
+content: "";
+font-size: 25px;
+
+}
+
+#ScoreText {
+content: "";
+font-size: 20px;
+}
+
+#GameTime{
+  font-size: 40px;
+}
+
+#inptusername {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.29);
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+  border: 3px solid rgb(3, 3, 3);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #inptusername {
+    width: 400px;
+    height: 70px;
+    font-size: 30px;
+  }
+}
+
+#inptusername::placeholder {
+  color: white;       /* changes placeholder text color */
+  opacity: 1;         /* ensures full opacity on some browsers */
+  overflow: hidden;
+}
+
+#inptusername:focus {
+  outline: none;
+  border: 3px solid rgb(255, 0, 0);
+  box-shadow: 0px 0px 35px rgb(176, 0, 0);
+}
+
+#GridLayout {
+  display: grid;
+ justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns of equal width */
+  grid-template-rows: 1fr 1fr 1fr;    /* 3 rows of equal height */
+  gap: 10px; /* optional spacing between cells */
+  gap: 100px;
+}
+
+.Boxes01 {
+  background-color: rgba(67, 228, 14, 0.575);
+  width: 180px;
+  height: 180px;
+}
+
+#MovingObjectDiv{
+    display: flex;
+  background-color: rgb(46, 46, 46);
+  height: 20%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-container {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  pointer-events: all;
+}
+
+.fade-container.hidden {
+  opacity: 0;
+  pointer-events: none; /* prevents interaction when hidden */
+}
+
+.Border {
+    display: flex;
+    border: 10px solid rgb(80, 80, 80)
+}
+
+#TopContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    height: 10vh;
+    width: 99%;
+}
+
+#CatchTheFoilGameName {
+  text-align: center;
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    font-size: 10px;
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(to right, var(--white), var(--red),var(--white), var(--red),var(--white));
+    height: 80%;
+    width: 99%; 
+    background-size: 200%;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-giedient 2s linear infinite
+}
+
+@keyframes animate-giedient {
+  to {
+    background-position: 200%;
+  }
+}
+
+:root {
+  --white: #ffffff; /* CatchTheFoilGameName */
+  --red: #ff0000; /* CatchTheFoilGameName */
+}
+
+
+.fallingDiv {
+  background: none;        /* Remove default background */
+  z-index: 0;
+  position: absolute;
+  width: 75px;   
+  height: 75px;
+  top: 0;
+  border-radius: 20px;
+}
+
+#damageOverlay {
+  position: fixed;        /* full screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  opacity: 0;             /* invisible by default */
+  pointer-events: none;   /* doesn’t block clicks */
+  z-index: 9999;          /* on top of everything */
+  transition: opacity 0.2s ease; /* smooth fade */
+}
+
+#PlayButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  font-size: 40px;
+  height: 60px;
+  width: 200px;
+  background: linear-gradient(180deg, rgb(112, 255, 83), #25c936);
+  border: 3px solid rgb(36, 164, 34);
+  position: relative;
+  overflow: hidden;
+}
+
+#LeaderboarButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  font-size: 40px;
+  height: 80px;
+  width: 85vw;
+  max-width: 500px;
+  background: linear-gradient(180deg, rgb(0, 149, 255), #1695ef);
+  border: 8px solid rgb(13, 149, 179);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  #LeaderboarButton {
+    font-size: 80px;
+    height: 120px;
+    width: 500px;
+  }
+}
+
+.ButtonTexture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("ImageFolder/BackgroundImages/BackgroundTexture.png");
+  background-repeat: repeat;
+  background-size: 50px 50px; /* wielkość kwadratów */
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0; /* żeby był pod tekstem */
+}
+
+/* Tekst przycisku nad pseudo-elementem */
+#PlayButton span {
+  position: relative;
+  z-index: 1;
+}
+
+.Button:hover {
+  transform: scale(1.05);
+  transition: 1s;   
+  
+}
+
+#TextFloor {
+  width: 90%;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+
+}
+
+#TextFloorSkin {
+  width: 40vw;
+  height: 15px;
+  background-color: rgb(0, 0, 0);
+
+}
+
+#MainDiv03 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(75, 75, 75, 0);
+  box-shadow: 0px 0px 30px rgb(white);
+  width: 40%;
+  height: 40%;
+}
+
+.avatar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.381); 
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    border-radius: 50%; 
+    width: 175px;
+    height: 175px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    transition: opacity 0.4s; 
+}
+
+/* Przycisk */
+.change-button {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f5f4f483;
+    background-image: url("images/change.png");
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Optional hover effect */
+.change-button:hover {
+    transform: rotate(120deg);
+}
+
+#PlayerCatcher {
+  display: none; /* hide initially */
+  position: absolute;
+  bottom: 50px; 
+  width: 75px;
+  height: 75px;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+#GridLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; /* top row = foils, bottom row = catcher */
+  gap: 100px;
+  position: relative;
+}
+
+.catcher {
+  width: 160px;
+  height: 160px;
+  background-image: url("images/avatar1.png"); /* same as avatar */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.25s ease; /*smooth slide*/
+  justify-self: center;
+  align-self: end;
+}
+
+#GameOverDiv {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(96, 96, 96, 0.85);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  gap: 30px;
+}
+
+#FinalScoreText {
+  font-size: 35px;
+}
+
+#GameOverDiv button {
+  font-size: 30px;
+  padding: 20px 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#GameOverDiv button:hover {
+  background-color: rgba(139, 0, 0, 0.6);
+}
+
+#GameOverDiv h1 {
+  font-size: 40px;
+}
+
+#PlayAgainButton button{
+  font-size: 2px;
+  background-color: black;
+
+}
+#GameStartDiv {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none; 
+  background-color: rgba(96, 96, 96, 0.85);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 110000;
+  gap: 5px;
+}
+#GameStartText {
+  font-size: 70px;;
+}

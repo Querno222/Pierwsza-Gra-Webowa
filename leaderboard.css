@@ -1,0 +1,144 @@
+#CenterContainerLeaderboard {
+  opacity: 1;
+  background: linear-gradient(180deg , rgba(246, 255, 0, 0.564));
+  box-shadow: 0px 0px 10px rgb(247, 255, 2);
+  border: 5px solid rgb(255, 243, 8);
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  #CenterContainerLeaderboard {
+    width: 40vw;
+  }
+}
+
+#CenterContainerSkins{
+  background: linear-gradient(180deg , rgba(54, 54, 54, 0.564));
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  border: 5px solid rgb(0, 0, 0);
+  width: 85vw;
+  max-width: 600px;
+  height: 40vh;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#leaderboardheading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  #leaderboardheading {
+    font-size: 50px;
+  }
+}
+
+.leaderboardlist {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(180deg , rgba(119, 119, 119, 0));
+  box-shadow: 0px 0px 10px rgba(249, 249, 249, 0);
+  border: 5px solid rgba(255, 253, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.PlayerList1 {
+  width: 80%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.PlayerList1:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.PlayerList1 span {
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+  .PlayerList1 span {
+    font-size: 24px;
+  }
+}
+
+.PlayerList1 span:first-child {
+  font-weight: bold;
+}
+
+/* Top 3 players highlighting */
+.PlayerList1:nth-child(1) {
+  background: rgba(244, 255, 27, 0.441);
+  border: 2px solid rgb(255, 251, 0);
+}
+
+.PlayerList1:nth-child(2) {
+  background: rgba(218, 218, 218, 0.441);
+  border: 2px solid rgba(100,100,100, 0.486);
+}
+
+.PlayerList1:nth-child(3) {
+  background: rgba(249, 161, 30, 0.441);
+  border: 2px solid rgba(255, 132, 8, 0.853);
+}
+
+/* Avatar next to username */
+.leaderboard-avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.SpanUsername {
+  font-size: 50px;
+  color: white; 
+}
+
+.SpanPoints {
+  font-size: 50px;
+  color: white;
+}
+
+#ResetLeaderboardButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.575);
+}
+
